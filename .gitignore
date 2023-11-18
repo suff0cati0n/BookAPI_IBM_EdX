@@ -1,0 +1,10 @@
+# Dependencies
+node_modules
+
+# SSH keys
+.ssh/
+.pub
+
+# Environment varibales
+.env*
+!.env*.example
