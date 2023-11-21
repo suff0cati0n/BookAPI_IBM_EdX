@@ -1,6 +1,7 @@
 const requireDir = require('require-dir');
 const express = require('express'); //Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 const { DateTime } = require("luxon"); //Luxon is a library for working with dates and times in JavaScript, and was written to supercede Moment.js.
+const books = require("./config/booksdb.js");
 const app = express();
 const helmet = require('helmet'); //Helmet helps you secure your Express apps by setting various HTTP headers. https://www.npmjs.com/package/helmet
 const os = require('os');
@@ -24,8 +25,10 @@ app.use(session({ secret: config.jwt.secret, resave: true, saveUninitialized: tr
 
 //app.use('/user', userRouter)
 
-if (config.env === 'development')
+if (config.debug()) {
+    console.log(config);
     console.log("Secret is " + config.jwt.secret);
+}
 
 app.use('/', publicRouter)
 app.use('/customer', customersRouter)
@@ -53,8 +56,7 @@ app.listen(config.port, async () => {
 
     console.log("Attempting to connect to mongodb server");
     await config.mongoClient.connect();
-    const db = config.mongoClient.db(config.DB_NAME);
-
+    await books.updateBooks();
     console.log("Connected to MongoDB server");
 });
 

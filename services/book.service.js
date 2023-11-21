@@ -8,7 +8,7 @@ const getBooks = async () => {
     return result;
 }
 
-const bookExists = async (isbn, returnResult) => {
+const bookExists = async (isbn, returnResult = false) => {
     const collection = config.mongoClient.db(config.DB_NAME).collection(config.BOOKS_COLLECTION_NAME);
     var query = { isbn: isbn };
     var result = await collection.findOne(query);
@@ -20,8 +20,22 @@ const bookExists = async (isbn, returnResult) => {
 }
 
 const insertBook = async (title, author, isbn, price) => {
-    const collection = config.mongoClient.db(config.DB_NAME).collection(config.BOOKS_COLLECTION_NAME);
-    var result = await collection.insertOne({ title: title, author: author, isbn: isbn, reviews: [], price: price });
+    var result = await new Promise((resolve, reject) => {
+        const collection = config.mongoClient.db(config.DB_NAME).collection(config.BOOKS_COLLECTION_NAME);
+        var insertID = collection.insertOne({ title: title, author: author, isbn: isbn, reviews: [], price: price });
+        resolve(insertID);
+    });
+
+    return result;
+}
+
+const updateBook = async (isbn, title, author, price) => {
+    var result = await new Promise((resolve, reject) => {
+        const collection = config.mongoClient.db(config.DB_NAME).collection(config.BOOKS_COLLECTION_NAME);
+        var objectFromDB = collection.updateOne({ isbn: isbn }, { $set: { title: title, author: author, price: price } });
+        resolve(objectFromDB);
+    });
+
     return result;
 }
 

@@ -14,11 +14,11 @@ const isValid = (username, password) => { //returns boolean
     return (username !== null && username !== undefined && username !== "") && (password !== null && password !== undefined && password !== "");
 }
 
-const authenticatedUser = (username, password) => { //returns boolean
+const authenticatedUser = async (username, password) => { //returns boolean
     //write code to check if username and password match the one we have in records
-    let user = userService.verifyUser(username, password);
+    let userMatch = await userService.verifyUser(username, password);
 
-    return user !== null && user !== undefined;
+    return userMatch;
 }
 
 function loggedIn(req) {
@@ -61,7 +61,7 @@ customersRouter.use("/auth", function auth(req, res, next) {
     }
 });
 
-customersRouter.post("/login", (req, res) => {
+customersRouter.post("/login", async (req, res) => {
     const userObj = req.user;
     const user = req.query.username;
     const pass = req.query.password;
@@ -69,7 +69,7 @@ customersRouter.post("/login", (req, res) => {
     if (!isValid(user, pass)) {
         return res.status(404).json({ message: "Body Empty" });
     }
-    if (!authenticatedUser(user, pass)) {
+    if (!await authenticatedUser(user, pass)) {
         return res.status(404).json({ message: "Invalid credentials" });
     }
     console.log("Setting a new token")
@@ -84,7 +84,7 @@ customersRouter.post("/login", (req, res) => {
     req.session.authorization = {
         accessToken, user
     }
-    return res.status(200).send("User successfully logged in");
+    return res.status(200).json({ message: "User successfully logged in" });
 });
 
 // Add a book review

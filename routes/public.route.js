@@ -15,6 +15,7 @@ publicRouter.post("/register", validation.register, publicController.register);
 publicRouter.get('/', async function (req, res) {
     //Write your code here
     await books.updateBooks();
+    console.log(books.getBooks());
     return res.status(300).json({ message: "Yet to be implemented - public route" });
 });
 

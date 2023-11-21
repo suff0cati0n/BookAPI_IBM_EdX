@@ -14,9 +14,13 @@ function validate(env) {
     return env != null && env !== undefined && env !== '';
 }
 
-console.log(envVars);
+function debug() {
+    return validate(envVars.NODE_ENV) ? envVars.NODE_ENV == "development" : true;
+
+}
 
 module.exports = {
+    debug: debug,
     env: validate(envVars.NODE_ENV) ? envVars.NODE_ENV : 'development',
     port: validate(envVars.PORT) ? envVars.PORT : 8080,
     jwt: {
@@ -27,4 +31,7 @@ module.exports = {
     DB_NAME: validate(envVars.DB_NAME) ? envVars.DB_NAME : 'bookstore',
     USERS_COLLECTION_NAME: validate(envVars.USERS_COLLECTION_NAME) ? envVars.USERS_COLLECTION_NAME : 'users',
     BOOKS_COLLECTION_NAME: validate(envVars.BOOKS_COLLECTION_NAME) ? envVars.BOOKS_COLLECTION_NAME : 'books',
+    hashSettings: {
+        saltRounds: validate(envVars.SALT_ROUNDS) ? envVars.SALT_ROUNDS : 10
+    }
 }
