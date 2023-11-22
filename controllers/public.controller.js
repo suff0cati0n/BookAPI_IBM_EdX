@@ -15,7 +15,6 @@ const register = (async (req, res) => {
 });
 
 const getBooks = (async (req, res) => {
-    //Write your code here
     await books.updateBooks();
     var bookList = books.getBooks();
     return res.status(300).json(bookList);

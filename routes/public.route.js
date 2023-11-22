@@ -10,6 +10,7 @@ publicRouter.get("/time", async (req, res) => {
     res.send("Welcome to the express server | It is now " + DateTime.now().toLocaleString(DateTime.DATETIME_MED));
 })
 
+// Register a new user
 publicRouter.post("/register", validation.register, publicController.register);
 
 // Get the book list available in the shop
