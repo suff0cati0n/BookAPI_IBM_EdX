@@ -10,3 +10,5 @@ node_modules
 !.env*.example
 
 data/books copy.json
+
+requirements.txt
