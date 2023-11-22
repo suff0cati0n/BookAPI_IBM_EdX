@@ -1,1 +1,136 @@
-{"records":[{"timestamp":1700534369178,"data":{"_id":"655825b895904ee05c711750","title":"Things Fall Apart","author":"Chinua Achebe","isbn":"0385474547","reviews":[],"price":0}},{"timestamp":1700534369179,"data":{"_id":"655825b895904ee05c711752","title":"The Book Of Job","author":"Unknown","isbn":"1998010015","reviews":[],"price":50}},{"timestamp":1700534369179,"data":{"_id":"655825b895904ee05c711753","title":"One Thousand and One Nights","author":"Unknown","isbn":"0199227737","reviews":[],"price":0}},{"timestamp":1700534369180,"data":{"_id":"655825b895904ee05c711754","title":"Njál's Saga","author":"Unknown","isbn":"0140447695","reviews":[],"price":0}},{"timestamp":1700534369180,"data":{"_id":"655825b895904ee05c711755","title":"Pride and Prejudice","author":"Jane Austen","isbn":"1853260002","reviews":[],"price":0}},{"timestamp":1700534369180,"data":{"_id":"655825b895904ee05c711756","title":"Le Père Goriot","author":"Honoré de Balzac","isbn":"2253085790","reviews":[],"price":0}},{"timestamp":1700534369181,"data":{"_id":"655825b895904ee05c711757","title":"Molloy, Malone Dies, The Unnamable, the trilogy","author":"Samuel Beckett","isbn":"0802144470","reviews":[],"price":0}},{"timestamp":1700534369181,"data":{"_id":"655825b895904ee05c711751","title":"The Epic Of Gilgamesh","author":"Unknown","isbn":"014044100X","reviews":[],"price":0}},{"timestamp":1700534369181,"data":{"_id":"655825b895904ee05c711759","title":"The Divine Comedy","author":"Dante Alighieri","isbn":"0451208633","reviews":[],"price":0}},{"timestamp":1700534369182,"data":{"_id":"655825b895904ee05c711758","title":"Fairy tales","author":"Hans Christian Andersen","isbn":"1853268992","reviews":[],"price":0}},{"timestamp":1700534369182,"data":{"_id":"655c09f044787af0b2ef1bed","title":"The Ballad of Songbirds and Snakes","author":"Suzanne Collins","isbn":"1339016575","reviews":[],"price":0}}]}
+{
+    "records": [
+        {
+            "timestamp": 1700618866102,
+            "data": {
+                "_id": "655825b895904ee05c711750",
+                "title": "Things Fall Apart",
+                "author": "Chinua Achebe",
+                "isbn": "0385474547",
+                "reviews": [],
+                "price": 0
+            }
+        },
+        {
+            "timestamp": 1700618866103,
+            "data": {
+                "_id": "655825b895904ee05c711752",
+                "title": "The Book Of Job",
+                "author": "Unknown",
+                "isbn": "1998010015",
+                "reviews": [],
+                "price": 50
+            }
+        },
+        {
+            "timestamp": 1700618866103,
+            "data": {
+                "_id": "655825b895904ee05c711753",
+                "title": "One Thousand and One Nights",
+                "author": "Unknown",
+                "isbn": "0199227737",
+                "reviews": [],
+                "price": 0
+            }
+        },
+        {
+            "timestamp": 1700618866103,
+            "data": {
+                "_id": "655825b895904ee05c711754",
+                "title": "Njál's Saga",
+                "author": "Unknown",
+                "isbn": "0140447695",
+                "reviews": [],
+                "price": 0
+            }
+        },
+        {
+            "timestamp": 1700618866104,
+            "data": {
+                "_id": "655825b895904ee05c711755",
+                "title": "Pride and Prejudice",
+                "author": "Jane Austen",
+                "isbn": "1853260002",
+                "reviews": [],
+                "price": 0
+            }
+        },
+        {
+            "timestamp": 1700618866104,
+            "data": {
+                "_id": "655825b895904ee05c711756",
+                "title": "Le Père Goriot",
+                "author": "Honoré de Balzac",
+                "isbn": "2253085790",
+                "reviews": [],
+                "price": 0
+            }
+        },
+        {
+            "timestamp": 1700618866104,
+            "data": {
+                "_id": "655825b895904ee05c711757",
+                "title": "Molloy, Malone Dies, The Unnamable, the trilogy",
+                "author": "Samuel Beckett",
+                "isbn": "0802144470",
+                "reviews": [],
+                "price": 0
+            }
+        },
+        {
+            "timestamp": 1700618866105,
+            "data": {
+                "_id": "655825b895904ee05c711751",
+                "title": "The Epic Of Gilgamesh",
+                "author": "Unknown",
+                "isbn": "014044100X",
+                "reviews": [],
+                "price": 0
+            }
+        },
+        {
+            "timestamp": 1700618866105,
+            "data": {
+                "_id": "655825b895904ee05c711759",
+                "title": "The Divine Comedy",
+                "author": "Dante Alighieri",
+                "isbn": "0451208633",
+                "reviews": [],
+                "price": 0
+            }
+        },
+        {
+            "timestamp": 1700618866106,
+            "data": {
+                "_id": "655825b895904ee05c711758",
+                "title": "Fairy tales",
+                "author": "Hans Christian Andersen",
+                "isbn": "1853268992",
+                "reviews": [],
+                "price": 0
+            }
+        },
+        {
+            "timestamp": 1700618917245,
+            "data": {
+                "_id": "655c09f044787af0b2ef1bed",
+                "title": "The Ballad of Songbirds and Snakes",
+                "author": "Suzanne Collins",
+                "isbn": "1339016575",
+                "reviews": [],
+                "price": "14.56"
+            }
+        },
+        {
+            "timestamp": 1700619105193,
+            "data": {
+                "_id": "655d58faac4c9cbc263da5f2",
+                "title": "Odd Thomas",
+                "author": "Dean Koontz",
+                "isbn": "0553802496",
+                "reviews": [],
+                "price": "19.50"
+            }
+        }
+    ]
+}

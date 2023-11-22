@@ -1,5 +1,6 @@
 const express = require('express');
 let books = require("../config/booksdb.js");
+const config = require('../config/config.js');
 const publicRouter = express.Router();
 const validation = require("../middlewares/validation.middleware.js");
 const publicController = require("../controllers/public.controller.js");
@@ -12,36 +13,19 @@ publicRouter.get("/time", async (req, res) => {
 publicRouter.post("/register", validation.register, publicController.register);
 
 // Get the book list available in the shop
-publicRouter.get('/', async function (req, res) {
-    //Write your code here
-    await books.updateBooks();
-    console.log(books.getBooks());
-    return res.status(300).json({ message: "Yet to be implemented - public route" });
-});
+publicRouter.get('/', validation.nothing, publicController.getBooks);
 
 // Get book details based on ISBN
-publicRouter.get('/isbn/:isbn', async function (req, res) {
-    //Write your code here
-    return res.status(300).json({ message: "Yet to be implemented" });
-});
+publicRouter.get('/isbn/:isbn', validation.hasValidISBN, publicController.getBookByISBN);
 
 // Get book details based on author
-publicRouter.get('/author/:author', async function (req, res) {
-    //Write your code here
-    return res.status(300).json({ message: "Yet to be implemented" });
-});
+publicRouter.get('/author/:author', validation.hasValidAuthor, publicController.getBookByAuthor);
 
 // Get all books based on title
-publicRouter.get('/title/:title', async function (req, res) {
-    //Write your code here
-    return res.status(300).json({ message: "Yet to be implemented" });
-});
+publicRouter.get('/title/:title', validation.hasValidTitle, publicController.getBookByTitle);
 
 //  Get book review
-publicRouter.get('/review/:isbn', async function (req, res) {
-    //Write your code here
-    return res.status(300).json({ message: "Yet to be implemented" });
-});
+publicRouter.get('/review/:isbn', validation.hasValidISBN, publicController.getBookReviewByISBN);
 
 
 module.exports = publicRouter;

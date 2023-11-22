@@ -8,3 +8,5 @@ node_modules
 # Environment varibales
 .env*
 !.env*.example
+
+data/books copy.json
