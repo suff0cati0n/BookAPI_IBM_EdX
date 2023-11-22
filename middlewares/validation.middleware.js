@@ -17,24 +17,6 @@ const authenticatedUser = async (username, password) => { //returns boolean
     return userMatch;
 }
 
-function loggedIn(req) {
-    if (req.session.authorization) { //get the authorization object stored in the session
-        token = req.session.authorization['accessToken']; //retrieve the token from authorization object
-        jwt.verify(token, "access", (err, user) => { //Use JWT to verify token
-            if (!err) {
-                req.user = user;
-
-                return true;
-            }
-            else {
-                return false;
-            }
-        });
-    } else {
-        return false;
-    }
-}
-
 
 const register = (async (req, res, next) => {
     const { email, password } = req.query;

@@ -1,7 +1,7 @@
 {
     "records": [
         {
-            "timestamp": 1700618866102,
+            "timestamp": 1700620589987,
             "data": {
                 "_id": "655825b895904ee05c711750",
                 "title": "Things Fall Apart",
@@ -12,7 +12,7 @@
             }
         },
         {
-            "timestamp": 1700618866103,
+            "timestamp": 1700620589988,
             "data": {
                 "_id": "655825b895904ee05c711752",
                 "title": "The Book Of Job",
@@ -23,7 +23,7 @@
             }
         },
         {
-            "timestamp": 1700618866103,
+            "timestamp": 1700620589988,
             "data": {
                 "_id": "655825b895904ee05c711753",
                 "title": "One Thousand and One Nights",
@@ -34,7 +34,7 @@
             }
         },
         {
-            "timestamp": 1700618866103,
+            "timestamp": 1700620589989,
             "data": {
                 "_id": "655825b895904ee05c711754",
                 "title": "Njál's Saga",
@@ -45,7 +45,7 @@
             }
         },
         {
-            "timestamp": 1700618866104,
+            "timestamp": 1700620589989,
             "data": {
                 "_id": "655825b895904ee05c711755",
                 "title": "Pride and Prejudice",
@@ -56,7 +56,7 @@
             }
         },
         {
-            "timestamp": 1700618866104,
+            "timestamp": 1700620589989,
             "data": {
                 "_id": "655825b895904ee05c711756",
                 "title": "Le Père Goriot",
@@ -67,7 +67,7 @@
             }
         },
         {
-            "timestamp": 1700618866104,
+            "timestamp": 1700620589990,
             "data": {
                 "_id": "655825b895904ee05c711757",
                 "title": "Molloy, Malone Dies, The Unnamable, the trilogy",
@@ -78,7 +78,7 @@
             }
         },
         {
-            "timestamp": 1700618866105,
+            "timestamp": 1700620589990,
             "data": {
                 "_id": "655825b895904ee05c711751",
                 "title": "The Epic Of Gilgamesh",
@@ -89,7 +89,7 @@
             }
         },
         {
-            "timestamp": 1700618866105,
+            "timestamp": 1700620589991,
             "data": {
                 "_id": "655825b895904ee05c711759",
                 "title": "The Divine Comedy",
@@ -100,7 +100,7 @@
             }
         },
         {
-            "timestamp": 1700618866106,
+            "timestamp": 1700620589991,
             "data": {
                 "_id": "655825b895904ee05c711758",
                 "title": "Fairy tales",
@@ -111,7 +111,7 @@
             }
         },
         {
-            "timestamp": 1700618917245,
+            "timestamp": 1700620589991,
             "data": {
                 "_id": "655c09f044787af0b2ef1bed",
                 "title": "The Ballad of Songbirds and Snakes",
@@ -122,13 +122,19 @@
             }
         },
         {
-            "timestamp": 1700619105193,
+            "timestamp": 1700620589992,
             "data": {
                 "_id": "655d58faac4c9cbc263da5f2",
                 "title": "Odd Thomas",
                 "author": "Dean Koontz",
                 "isbn": "0553802496",
-                "reviews": [],
+                "reviews": [
+                    {
+                        "username": "nlovett0218@gmail.com",
+                        "review": "Test review 2",
+                        "rating": "5"
+                    }
+                ],
                 "price": "19.50"
             }
         }

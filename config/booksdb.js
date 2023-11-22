@@ -199,10 +199,27 @@ const updateBook = (async (req, isbn, title, author, price) => {
       return book;
 });
 
+const getReviewsByISBN = (async (req, isbn) => {
+      let booksByISBN = await getBooks({ identifierName: "isbn", identifierValue: isbn });
+
+      if (booksByISBN.length > 0) {
+            let book = booksByISBN[0];
+            let reviews = book.reviews;
+
+            if (reviews.length == 0)
+                  return { response: "No reviews found" };
+
+            return reviews;
+      }
+
+      return { response: "No books found with given ISBN" };
+});
+
 
 module.exports =
 {
       getBooks,
+      getReviewsByISBN,
       updateBooks,
       addReview,
       removeReview,

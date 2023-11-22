@@ -103,10 +103,27 @@ const updateBook = (async (req, res) => {
     return res.status(200).json({ message: "Book successfully updated", book: bookObj });
 });
 
+const getReviewsByISBN = (async (req, res) => {
+    const { isbn } = req.params;
+
+    if (!isbn) {
+        return res.status(404).json({ message: "Body Empty" });
+    }
+
+    let bookObj = await books.getReviewsByISBN(req, isbn);
+
+    if (bookObj.response) {
+        return res.status(200).json({ message: "Unable to retrieve reviews", response: bookObj.response });
+    }
+
+    return res.status(200).json({ message: "Reviews successfully found", reviews: bookObj });
+});
+
 module.exports = {
     login,
     addReview,
     removeReview,
+    getReviewsByISBN,
     addBook,
     updateBook
 };

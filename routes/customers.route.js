@@ -28,13 +28,17 @@ customersRouter.use("/auth", function auth(req, res, next) {
     }
 });
 
+// Login
 customersRouter.post("/login", validation.login, customersController.login);
 
 // Add a book review
 customersRouter.put("/auth/review/:isbn", validation.hasValidSession, customersController.addReview);
 
-// Add a book to the list
+// Remove a book review
 customersRouter.delete("/auth/review/:isbn", validation.hasValidSession, customersController.removeReview);
+
+// Get reviews for a book
+customersRouter.get("/auth/review/:isbn", validation.hasValidSession, customersController.getReviewsByISBN);
 
 // Add a book to the list
 customersRouter.put("/auth/book/add", validation.hasValidSession, customersController.addBook);
